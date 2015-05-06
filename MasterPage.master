@@ -1,0 +1,70 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 1024px;
+            margin: auto;
+        }
+        .wrap 
+        { 
+            white-space: normal; width: 100px; 
+        }
+    </style>
+</head>
+<body style="background-color:Black; text-align:center; margin:0 auto">
+    <form id="form1" runat="server">
+    <div  style="filter: alpha(opacity=60)">
+    </div>
+    <table class="style1">
+        <tr>
+            <td colspan="2" style="height:48px; background-color: #555555">
+                <asp:Image ID="Image1" runat="server" 
+                    ImageUrl="http://www.techmeister.net/steve/Armageddon/header.jpg" />
+            </td>
+        </tr>
+        <tr>
+            <td style="width:48px; background-color: #BBBBBB; vertical-align: top; text-align: left">
+                <asp:Menu ID="Menu1" runat="server">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/NewPlayerTutorial.aspx" Text="New Player Tutorial" 
+                            Value="New Player Tutorial"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/sDescGenerator.aspx" Text="sDesc Generator" 
+                            Value="sDesc Generator"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/LimitedCharLineEditor.aspx" 
+                            Text="Limited Char Text Editor" Value="Limited Char Text Editor">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/ArmEnviroClock.aspx" 
+                            Text="Enviro Tracker Clock" Value="Enviro Tracker Clock">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/LogItemIndexer.aspx" 
+                            Text="Log Item Indexer" Value="Log Item Indexer">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/MUSHClientTransparency.aspx" 
+                            Text="MUSH Transparency" Value="MUSH Transparency"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </td>
+            <td style="background-color: white">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="height:48px; background-color: #555555">
+                &nbsp;</td>
+        </tr>
+    </table>
+   </form>
+</body>
+</html>
